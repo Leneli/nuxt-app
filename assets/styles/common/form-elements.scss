@@ -1,0 +1,294 @@
+// form
+.form {
+	display: block;
+	width: 100%;
+	margin-bottom: 30px;
+	font-family: $ctm;
+}
+
+.form__field {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.form__error {
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.5;
+	color: $error;
+}
+
+
+.form__message {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+
+	&.success {
+		color: $success;
+	}
+
+	&.error {
+		color: $error;
+	}
+}
+
+.form__text {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+.form-talk {
+	@include l-phones {
+		.button_standart {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.form_cols {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.form__field {
+		flex: 0 0 48%;
+		max-width: 48%;
+
+		@include large {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
+
+	.form__field_full {
+		flex: 1 1 100%;
+		max-width: 100%;
+
+		@include tablets {
+			.button {
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+// for custom form
+.form__group {
+	display: flex;
+	width: 100%;
+	align-items: baseline;
+	justify-content: space-between;
+
+	@include tablets {
+		display: block;
+	}
+
+	& > *:not(:first-child) {
+		padding-left: 8px;
+
+		@include tablets {
+			padding-left: 0;
+		}
+	}
+
+	& > *:not(:last-child)  {
+		padding-right: 8px;
+
+		@include tablets {
+			padding-right: 0;
+		}
+	}
+}
+
+.form__field {
+	flex: 1 1 100%;
+}
+
+
+// inputs
+.input {
+	@include input();
+}
+
+.input_color {
+	@include input($bcolor: $inputColore);
+	
+}
+
+.textarea {
+	@include input();
+
+	min-height: 160px;
+	resize: vertical;
+}
+
+.textarea_color {
+	@include input($bcolor: $inputColore);
+
+	min-height: 160px;
+	resize: vertical;
+}
+
+.select {
+	@include input();
+
+	padding-right: 45px!important;
+	background-image: url(/static/img/decor/select-arrow.svg);
+	background-position: calc(100% - 20px) 50%;
+	background-repeat: no-repeat;
+}
+
+.select_color {
+	@extend .select;
+	@include input($bcolor: $inputColore);
+}
+
+// file input
+label.file {
+	@include transition();
+
+	padding: 8px 20px 13px;
+	font-family: $akz;
+	font-size: 18px;
+	font-weight: 400;
+	cursor: pointer;
+
+	&::after {
+		content: "Attach";
+		padding-left: 20px;
+		color: $link;
+		text-decoration: underline;
+	}
+
+	&:hover {
+		&::after {
+			color: $accent;
+		}
+	}
+
+	input[type=file] { display: none; }
+}
+
+// checkbox & radio
+label.radio,
+label.checkbox {
+	@include transition();
+
+	display: flex;
+	align-items: flex-start;
+	font-family: $akz;
+	font-size: 18px;
+	font-weight: 400;
+
+	&::before {
+		@include transition();
+
+		content: "\f00c";
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		margin-top: 4px;
+		margin-right: 10px;
+		font-size: 0;
+		font-family: $fas;
+		background: $white;
+		border-radius: 3px;
+		box-shadow: inset 0 0 0 2px rgba($link, 0);
+		cursor: pointer;
+	}
+
+	&:hover {
+		&::before {
+			box-shadow: inset 0 0 0 2px rgba($link, 1);
+		}
+	}
+
+	&.checked {
+		&::before {
+			font-size: .9em;
+		}
+	}
+
+	&[class*=invalid] {
+		box-shadow: none;
+		color: $error;
+
+		&::before {
+			box-shadow: inset 0 0 0 2px rgba($error, 1);
+		}
+	}
+}
+
+label.radio {
+	&::before {
+		content: "\f111";
+		border-radius: 50%;
+	}
+
+	&.checked {
+		&::before {
+			font-size: .5em;
+		}
+	}
+}
+
+// buttons
+.button {
+	@include button();
+}
+
+.button_standart {
+	min-width: 165px;
+}
+
+.button_small_accent {
+	@include button($h: $buttonSmallH, $fz: 14px, $bradius: 20px, $color: $accent, $hover: $link);
+}
+
+.button_disabled {
+	@include button($color: $darkGrey, $hover: $darkGrey);
+
+	cursor: not-allowed;
+}
+
+
+// validation
+*[class*=invalid] {
+	box-shadow: 0 0 0 2px $error inset;
+}
+
+
+
+// commot
+// browswers
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	input,
+	select,
+	textarea,
+	*.input { 
+		/* remove inner shadow on iOS input */ 
+		//background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,0))); 
+		//background-image: -webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+		-webkit-appearance: none;
+		border-radius: 6px!important;
+	}
+
+	select {
+		background-repeat: no-repeat;
+		background-position: 96% 50%;
+	}
+}
+input::-ms-expand,
+select::-ms-expand { display: none; }

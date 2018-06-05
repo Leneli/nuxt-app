@@ -1,0 +1,147 @@
+.banner {
+	position: relative;
+	display: flex;
+	margin-top: -$headerDescH; // for sticky
+	padding-top: $headerDescH;
+	padding-bottom: 60px; // for link ToBottom
+	justify-content: space-between;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(15, 37, 83, .5);
+	}
+
+	@include tablets {
+		margin-top: -$headerMobiH; // for sticky
+		padding-top: $headerMobiH;
+		flex-wrap: wrap;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+}
+
+.banner__item {
+	flex: 0 0 50%;
+	max-width: 50%;
+
+	font-family: $akz;
+
+	@include tablets {
+		flex: 1 1 100%;
+		max-width: none;
+		margin-bottom: 30px;
+		padding-left: 10%;
+    	padding-right: 10%;
+	}
+
+	@include phones {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.banner__item_last {
+	@include tablets {
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.banner__slogan {
+	padding: 90px 0;
+	color: $headerBg;
+	font-family: $sup;
+	font-weight: 400;
+	font-size: 118px;
+	line-height: 112px;
+	letter-spacing: 2px;
+
+	@include large {
+		font-size: 7vw;
+		line-height: 1;
+	}
+
+	@include tablets {
+		max-width: 400px;
+		font-size: 56px;
+		letter-spacing: 2.5px;
+	}
+}
+
+.banner__desc {
+	display: block;
+	max-width: 360px;
+	margin: 0;
+	margin-left: auto;
+	padding: 40px;
+	padding-top: 50px;
+	background-color: rgba($white, .95);
+
+	@include tablets {
+		max-width: none;
+		padding-left: 10%;
+    	padding-right: 10%;
+	}
+
+	@include phones {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.banner__text {
+	font-family: $akz;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $color;
+
+	@include tablets {
+		font-size: 16px;
+	}
+}
+
+.banner__buttons {
+	margin-top: 30px;
+
+	& > * {
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+	@include tablets {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& > * {
+			flex: 0 0 45%;
+		}
+	}
+
+	@include l-phones {
+		flex-wrap: wrap;
+
+		& > * {
+			flex: 1 1 100%;
+		}
+	}
+}

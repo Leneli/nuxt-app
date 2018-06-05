@@ -1,0 +1,172 @@
+.footer {
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-bottom: 25px;
+	background-color: $footerBG;
+	color: $white;
+	font-family: $akz, $def;
+	font-size: 12px;
+	font-weight: 400;
+
+	@include tablets {
+		flex-wrap: wrap;
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+}
+
+// block
+.footer__block {
+	display: flex;
+	flex-wrap: wrap;
+
+	flex: 1 1 30%; // for IE
+
+	& > * {
+		flex: 1 1 100%;
+	}
+
+	@include tablets {
+		flex: 1 1 100%;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.footer__block_narr {
+	//max-width: 300px; // for IE
+}
+
+.footer__block_right {
+	@extend .footer__block;
+
+	justify-content: flex-end;
+}
+
+// logo
+.footer__logo {
+	width: 195px;
+	max-width: 195px;
+	height: 45px;
+
+	@include tablets {
+		display: none;
+	}
+}
+
+
+// navigation
+.footer__nav {
+	display: block;
+	margin-right: 30px;
+
+	& > * {
+		display: block;
+		padding: 6px 0;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1;
+		color: $white;
+		text-decoration: none;
+		
+		&.router-link-active {
+			text-decoration: underline;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@include tablets {
+		display: none;
+	}
+}
+
+
+// contact info
+.footer__contact {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	padding-top: 5px;
+	font-size: 14px;
+
+	& > * {
+		flex: 1 1 100%;
+		&:not(:last-child) { padding-bottom: 8px; }
+	}
+
+	@include tablets {
+		font-size: 16px;
+	}
+
+	@include phones {
+		font-size: 14px;
+	}
+}
+
+// socials
+.footer__social {
+	@include transition();
+
+	margin-bottom: 3px;
+	margin-top: auto;
+
+	a {
+		@include transition();
+
+		color: $white;
+		font-size: 16px;
+	}
+
+	a:hover {
+		color: $accent;
+	}
+
+	@include tablets {
+		margin: 20px 0 40px;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+
+		& > *:last-child { margin-right: 0; }
+	}
+}
+
+
+// cotyright
+.copyright {
+	margin-top: auto;
+	padding-bottom: 4px;
+	font-family: $akz, $def;
+	color: $white;
+	font-size: 12px;
+	line-height: 1.6;
+	text-align: right;
+
+	@include tablets {
+		margin-bottom: auto;
+		flex: 1 1 100%;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.copyright__exp {
+	font-weight: 300;
+}
+
+.copyright__txt {
+	font-weight: 500;
+
+	@include tablets {
+		font-weight: normal;
+	}
+}

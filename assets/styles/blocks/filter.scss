@@ -1,0 +1,96 @@
+.filter {
+	display: flex;
+
+	@include tablets {
+		align-items: center;
+	}
+
+	& > *:not(.is-active) {
+		cursor: pointer;
+
+		&:hover {
+			.tabs-component-tab-a {
+				color: rgba($link, .5);
+
+				&::before,
+				&::after { content: none; }
+			}
+		}
+
+		@include tablets {
+			&,
+			&.is-active
+			&.is-active
+			&.is-inactive,
+			&.is-inactive {
+				&::before,
+				&::after,
+				& > *::before,
+				& > *::after { content: none!important; }
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-width: auto;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid $link;
+			border-radius: 20px;
+			
+			& > * {
+				padding: 0;
+				font-size: 14px;
+				border: none;
+			}
+		}
+	}
+
+	& > *.is-active {
+		@include tablets {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-width: auto;
+			padding: 10px;
+			margin: 5px;
+			background-color: $link;
+			border: 2px solid $link;
+			border-radius: 20px;
+
+			& > *::before,
+			& > *::after { content: none!important; }
+
+			* {
+				margin: 0;
+				padding: 0;
+				border: none;
+				color: $white!important;
+				font-size: 14px;
+			}
+		}
+	}
+
+	& > *.is-inactive {
+		opacity: .5;
+		color: $darkGrey;
+		cursor: not-allowed;
+
+		&, * { color: $darkGrey; }
+
+		&:hover {
+			.tabs-component-tab-a {
+				color: $darkGrey;
+
+				&::before,
+				&::after { content: none; }
+			}
+		}
+
+		@include tablets { border-color: $darkGrey; }
+	}
+
+	@include tablets {
+		flex-wrap: wrap;
+	}
+}

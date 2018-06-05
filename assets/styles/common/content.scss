@@ -1,0 +1,67 @@
+.content {
+	font-family: $ctm;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 30px;
+	line-height: 1.5;
+
+	a { @extend .link; }
+
+	ul,
+	ol {
+		& > li {
+			padding: 15px 0;
+			font-family: $ctm;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+
+		& > li:first-child { padding-top:    0; }
+		& > li:last-child  { padding-bottom: 0; }
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.date {
+	font-family: $ctm;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.7;
+}
+
+
+// for section with form (Candidates, Clients)
+.content_form-section {
+	display: flex;
+	margin-bottom: 40px;
+
+	& > * {
+		max-width: 50%;
+
+		@include medium {max-width: none; }
+	}
+
+	& > *:not(:first-child) {
+		padding-left: 15px;
+
+		@include medium { padding-left: 0; }
+	}
+
+	& > *:not(:last-child) {
+		padding-right: 15px;
+
+		@include medium { padding-right: 0; }
+	}
+
+	img {
+		width: 100%;
+		margin-top: -100px;
+
+		@include medium { display: none; }
+	}
+}

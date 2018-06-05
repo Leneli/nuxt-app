@@ -1,0 +1,58 @@
+// VARIABLES
+
+// media queries
+$phones:   480px;
+$l-phones: 575px;
+$tablets:  768px;
+$medium:   991px;
+$large:    1199px;
+$x-large:  1439px;
+
+
+// fonts
+$akz: "AkzidenzGroteskPro";
+$cnd: "AkzidenzGroteskPro-Cnd";
+$sup: "AkzidenzGroteskPro-Super";
+$ext: "AkzidenzGroteskPro-Extra";
+$ctm: "Catamaran";
+$fa : "FontAwesome";
+$fas: "FontAwesomeSolid";
+$brand: "FontAwesomeBrand";
+$def: Arial, Helvetica, sans-serif;
+
+
+// sizes
+$headerDescH: 80px;
+$headerMobiH: 50px;
+
+$buttonStandH: 50px;
+$buttonSmallH: 30px;
+
+
+// colors
+$white    : #fff;
+$black    : #000;
+$nearWith : #f2f2f2;
+$lightGr0 : #ebeff0;
+$darkGrey : #909294;
+$lightGrey: #e6e7eb;
+$darkBlue1: #172952;
+$darkBlue2: #0f2554; 
+$darkBlue3: #002553;
+$lightBlue: #00a0df;
+$orange   : #ff5100;
+$green    : #42b983;
+$red      : #f66;
+$yellow   : #ffc900;
+
+$color      : $darkBlue1;
+$link       : $lightBlue;
+$accent     : $orange;
+$headerColor: $darkBlue2;
+$footerBG   : $darkBlue3;
+$placeholder: rgba($darkBlue1, .2);
+$inputColore: $lightGr0;
+$success    : $green;
+$error      : $red;
+$headerBg   : $nearWith;
+$star       : $yellow;

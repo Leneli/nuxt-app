@@ -1,0 +1,269 @@
+.i-map::before {
+	content: "\f3c5";
+	font-family: $fas;
+}
+
+.i-tel::before {
+	content: "\f095";
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	font-family: $fas;
+	transform: rotate(90deg);
+	transform-origin: center;
+}
+
+.i-mail::before {
+	content: "\f0e0";
+	margin-right: 10px;
+	font-family: $fa;
+}
+
+.google::before,
+.i-google::before {
+	content: "\f0d5";
+	font-family: $brand;
+}
+
+.twitter::before,
+.i-twitter::before {
+	content: "\f099";
+	font-family: $brand;
+}
+
+.facebook::before,
+.i-fb::before {
+	content: "\f39e";
+	font-family: $brand;
+}
+
+.instagram::before,
+.i-insta::before {
+	content: "\f16d";
+	font-family: $brand;
+}
+
+.linkedin::before,
+.i-linkedin::before {
+	content: "\f0e1";
+	font-family: $brand;
+}
+
+
+// cross button
+.close {
+	width: 30px;
+	height: 30px;
+	background-image: url(/static/img/decor/close-cross.png);
+	background-position: center;
+	//background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+
+// STARS
+%star {
+	position: relative;
+	display: inline-block;
+	
+	&::before,
+	&::after {
+		font-size: 16px;
+		color: $star;
+	}
+}
+
+.star {
+	@extend %star;
+
+	&::before {
+		content: "\f005";
+		font-family: $fas;
+	}
+}
+
+.star-0 {
+	@extend %star;
+
+	&::before {
+		content: "\f005";
+		font-family: $fa;
+	}
+}
+
+.star-h {
+	@extend %star;
+
+	&::before {
+		content: "\f089";
+		font-family: $fas;
+	}
+
+	/*&::after {
+		//content: "\f089";
+		position: absolute;
+		display: block;
+		top: 1px;
+    	right: 3px;
+		font-family: $fa;
+		transform: scale3d(-1, 1, -1);
+	}*/
+}
+
+
+// SHARE BUTTONS
+.share-buttons {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	& > * {
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	& > *:not(:last-child) { margin-right: 5px; }
+}
+
+.share-button {
+	@include transition();
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	padding: 0 10px;
+	color: $white;
+	font-family: $ctm;
+	font-size: 14px;
+    line-height: 1;
+	background-color: $link;
+	transform: translate3d(0, 0, 0);
+	box-shadow: 0 0 0 0 rgba($black, 0);
+	cursor: pointer;
+
+	&:hover {
+		transform: translate3d(0, -7px, 0);
+		box-shadow: 0 7px 0 0 rgba($black, .1);
+
+		@include tablets {
+			transform : none;
+			box-shadow: none;
+		}
+	}
+
+	&::before {
+		font-family: $brand;
+		font-size: 24px;
+	}
+
+	& > span {
+		margin-left: 7px;
+		padding-bottom: 2px;
+	}
+}
+
+// icons
+.share-button {
+	&__fb {
+		background-color: #395c9b;
+
+		&::before { content: "\f39e"; }
+	}
+
+	&__tw {
+		background-color: #1ca4f6;
+
+		&::before { content: "\f099"; }
+	}
+
+	&__gp {
+		background-color: #df4a32;
+
+		&::before { content: "\f0d5"; }
+	}
+
+	&__pin {
+		background-color: #d90a26;
+
+		&::before { content: "\f231"; }
+	}
+
+	&__email {
+		background-color: #848484;
+
+		&::before {
+			content: "\f0e0";
+			font-family: $fas;
+		}
+	}
+
+	&__sms {
+		background-color: #848484;
+
+		&::before {
+			content: "\f27a";
+			font-family: $fas;
+		}
+	}
+
+	&__wapp {
+		background-color: #189d0e;
+
+		&::before {
+			content: "\f232";
+		}
+	}
+
+	&__vi {
+		background-color: #7e51a0;
+
+		&::before {
+			content: "\f409";
+		}
+	}
+
+	&__tele {
+		background-color: #219fe4;
+
+		&::before {
+			content: "\f3fe";
+		}
+	}
+
+	&__sk {
+		background-color: #00b0ef;
+
+		&::before {
+			content: "\f17e";
+		}
+	}
+
+	&__in {
+		background-color: #025a89;
+
+		&::before {
+			content: "\f0e1";
+		}
+	}
+
+	&__more {
+		background-color: #fc5b4d;
+
+		&::before {
+			content: "\f067";
+			font-family: $fas;
+		}
+	}
+
+	&__hidde {
+		background-color: #fc5b4d;
+
+		&::before {
+			content: "\f068";
+			font-family: $fas;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+$r: -20px;
+$z: 1;
+
+.the-best {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	top: -60px;
+
+	@include tablets {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.the-best__img {
+	@include transition($prop: transform);
+
+	position: relative;
+	display: block;
+	transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+
+	&:nth-last-of-type(2) {
+		right: $r;
+		z-index: $z;
+	}
+	&:nth-last-of-type(3) {
+		right: $r * 2;
+		z-index: $z + 1;
+	}
+	&:nth-last-of-type(4) {
+		right: $r * 3;
+		z-index: $z + 2;
+	}
+	&:nth-last-of-type(5) {
+		right: $r * 4;
+		z-index: $z + 3;
+	}
+	&:nth-last-of-type(6) {
+		right: $r * 5;
+		z-index: $z + 4;
+	}
+	&:nth-last-of-type(7) {
+		right: $r * 6;
+		z-index: $z + 5;
+	}
+	&:nth-last-of-type(8) {
+		right: $r * 7;
+		z-index: $z + 6;
+	}
+	&:nth-last-of-type(9) {
+		right: $r * 8;
+		z-index: $z + 7;
+	}
+	&:nth-last-of-type(10) {
+		right: $r * 9;
+		z-index: $z + 8;
+	}
+
+	&:hover {
+		transform: translate3d(0, -15%, 0) scale3d(1.15, 1.15, 1.15);
+		z-index: 10;
+	}
+
+	@include tablets {
+		transform: scale3d(.9, .9, .9);
+
+		&:nth-last-of-type(2),
+		&:nth-last-of-type(3),
+		&:nth-last-of-type(4),
+		&:nth-last-of-type(5),
+		&:nth-last-of-type(6),
+		&:nth-last-of-type(7),
+		&:nth-last-of-type(8),
+		&:nth-last-of-type(9),
+		&:nth-last-of-type(10) {
+			right: auto;
+			z-index: 1;
+		}
+	}
+}

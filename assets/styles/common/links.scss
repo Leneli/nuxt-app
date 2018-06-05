@@ -1,0 +1,126 @@
+// Logo link
+$lw: 197px;
+$lh: 49px;
+
+.logo {
+	display: inline-block;
+	width: $lw;
+	height: $lh;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+// stangart links
+.link {
+	@include transition($prop: color);
+
+	color: $link;
+	
+	&:hover {
+		color: $accent;
+	}
+}
+
+.link_inherit {
+	@include transition($prop: color);
+
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+	
+	&:hover {
+		color: $accent;
+	}
+}
+
+.link_underline {
+	text-decoration: underline;
+}
+
+
+// arrow to bottom
+.link_tobott {
+	@include transition();
+
+	position: absolute;
+	display: flex;
+	width: 100px;
+	height: 100px;
+	right: -50px;
+	bottom: -50px;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	color: rgba($white, .7);
+	transform: scale3d(1, 1, 1);
+	cursor: pointer;
+
+	&::before {
+		content: "\f107";
+		font-family: $fas;
+	}
+
+	&:hover {
+		color: rgba($white, 1);
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	@include medium {
+		bottom: -80px;
+	}
+
+	@include tablets {
+		transform: none;
+		right: auto;
+		left: calc(50% - 50px);
+		bottom: -20px;
+
+		&:hover {
+			color: rgba($white, .7);
+			transform: none;
+		}
+	}
+}
+
+
+// navigatw links with arrows
+.to-next,
+.to-prev {
+	@extend .link;
+
+	display: flex;
+	align-items: center;
+	font-family: $akz;
+	font-size  : 18px;
+	font-weight: 500;
+	line-height: 2;
+	text-decoration: none;
+
+	&::before,
+	&::after {
+		font-family: $fas;
+	}
+
+	&.is-inactive:hover { color: $link; }
+}
+
+.to-prev {
+	&::before {
+		content: "\f104";
+		margin-right: 7px;
+	}
+}
+
+.to-next {
+	&::after {
+		content: "\f105";
+		margin-left: 7px;
+	}
+}

@@ -1,0 +1,244 @@
+.persons {
+	position: relative;
+	display: flex;
+	padding-top: 120px;
+
+	@include large {
+		display: block;
+	}
+
+	@include tablets {
+		padding-top: 60px;
+	}
+}
+
+.persons__col {
+	flex: 1 1 100%;
+
+	max-width: calc(100% - 275px);
+
+	@include large {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+.persons__col_sm {
+	flex: 0 0 220px;
+	margin-right: 55px;
+
+	@include large {
+		margin-right: 0;
+		margin-bottom: 60px;
+	}
+}
+
+.persons__all,
+.persons__single {
+	width: 100%;
+}
+
+
+.persons__all {
+	position: relative;
+	display: flex;
+	width: 100%;
+    bottom: -100px;
+    margin-top: -100px;
+	flex: 1 1 100%;
+	flex-wrap: wrap;
+
+	& > * {
+		flex: 0 0 calc(100% / 3);
+		-ms-flex: 0 0 33%;
+		max-width: calc(100% / 3);
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+.persons__single {
+	position: relative;
+	bottom: -15px;
+	
+	.swiper-container {
+    	padding-bottom: 60px;
+	}
+
+	.persons__prev,
+	.persons__next {
+		height: 30px;
+		top: 100%;
+		margin-top: -30px;
+		background-size: contain;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.persons__prev {
+		left: auto;
+		right: 100px;
+	}
+}
+
+
+.persons__card {
+	display: flex;
+	width: 100%;
+	align-items: flex-start;
+
+	@include tablets {
+		display: block;
+		text-align: center;
+	}
+
+	& > img {
+		display: block;
+		flex: 0 0 260px; // for IE
+		margin-right: 30px;
+		width: 100%;
+		width: 260px;
+		max-width: 260px;
+		height: auto;
+		object-fit: contain;
+
+		@include tablets {
+			width: auto;
+			margin: auto;
+		}
+	}
+
+	.close {
+		display: block;
+		margin-left: auto;
+
+		@include tablets {
+			// display: none;
+		}
+	}
+}
+
+
+.persons__preview {
+	position: relative;
+	display: block;
+	width: 100%;
+	background-color: $lightGrey;
+	background-image: url(/static/img/decor/big-logo-white.svg);
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	overflow: hidden;
+
+	width: 260px;
+    height: 260px;
+    margin: auto;
+
+	cursor: pointer;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		.persons__prev_hover {
+			opacity: 1;
+		}
+	}
+
+	@include x-large {
+		width: 18vw;
+		height: 18vw;
+	}
+
+	@include large {
+		width: 25vw;
+		height: 25vw;
+	}
+}
+.persons__preview_noimg {
+	@extend .persons__preview;
+
+	flex: 0 0 260px;
+	width: 260px;
+	height: 260px;
+	margin: 0;
+	margin-right: 30px;
+
+	@include tablets {
+		margin: 0 auto;
+		margin-right: auto;
+	}
+}
+
+.persons__prev_hover {
+	@include transition();
+
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+	background-color: rgba($white, .86);
+	border-radius: 50%;
+	opacity: 0;
+}
+
+.persons__name {
+	font-family: $akz;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $color;
+}
+
+.persons__name_big {
+	@extend .persons__name;
+
+	margin: 20px 0;
+	font-size: 24px;
+}
+
+.persons__office {
+	font-family: $akz;
+	font-size: 15px;
+	font-style: italic;
+	line-height: 1.5;
+	color: $color;
+}
+
+.persons__text {
+	margin: 30px 0;
+	font-family: $ctm;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.8;
+	color: $color;
+	text-align: left;
+}
+
+.persons__link {
+	@extend .link;
+
+	position: absolute;
+	bottom: 35px;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	&:hover {
+		color: $link;
+		text-decoration: underline;
+	}
+}
+
+

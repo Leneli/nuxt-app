@@ -1,0 +1,382 @@
+// WEB FONTS
+// common mixin, for new browsers
+@mixin font(
+			$family,
+			$src,
+			$weight: normal,
+			$style: normal
+	) {
+	@font-face {
+		font: {
+			family: $family;
+			weight: $weight;
+			style: $style;
+		}
+		src: url($src + ".woff2") format("woff2"),
+			 url($src + ".woff") format("woff");
+	}
+}
+
+
+//mixin for font with different styles (regular, bold, italic, bold-italic), for new browsers
+@mixin fontRbi(
+			$family,
+			$src
+	) {
+	@font-face {
+		font: {
+			family: $family;
+			weight: normal;
+			style: normal;
+		}
+		src: url($src + "_Regular.woff2") format("woff2"),
+			 url($src + "_Regular.woff") format("woff");
+	}
+	@font-face {
+		font: {
+			family: $family;
+			weight: normal;
+			style: italic;
+		}
+		src: url($src + "_Italic.woff2") format("woff2"),
+			 url($src + "_Italic.woff") format("woff");
+	}
+	@font-face {
+		font: {
+			family: $family;
+			weight: bold;
+			style: normal;
+		}
+		src: url($src + "_Bold.woff2") format("woff2"),
+			 url($src + "_Bold.woff") format("woff");
+	}
+	@font-face {
+		font: {
+			family: $family;
+			weight: bold;
+			style: italic;
+		}
+		src: url($src + "_BoldItalic.woff2") format("woff2"),
+			 url($src + "_BoldItalic.woff") format("woff");
+	}
+}
+
+// Catamaran
+@mixin fontCatamaran($src) {
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-black-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-black-webfont.woff') format('woff');
+		font-weight: 900;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-extrabold-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-extrabold-webfont.woff') format('woff');
+		font-weight: 800;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-bold-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-bold-webfont.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-semibold-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-semibold-webfont.woff') format('woff');
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-medium-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-medium-webfont.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-regular-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-regular-webfont.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-light-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-light-webfont.woff') format('woff');
+		font-weight: 300;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Catamaran';
+		src: url($src + 'catamaran-extralight-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-extralight-webfont.woff') format('woff');
+		font-weight: 200;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'catamaranthin';
+		src: url($src + 'catamaran-thin-webfont.woff2') format('woff2'),
+			 url($src + 'catamaran-thin-webfont.woff') format('woff');
+		font-weight: 100;
+		font-style: normal;
+	}
+}
+
+// AkzidenzGroteskPro
+@mixin fontAkzidenzGroteskPro($src) {
+	// AkzidenzGroteskPro
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-XBdIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-XBdIt.woff') format('woff');
+		font-weight: 800;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-XBd.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-XBd.woff') format('woff');
+		font-weight: 800;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-BoldIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-BoldIt.woff') format('woff');
+		font-weight: 700;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-Bold.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Bold.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-MdIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-MdIt.woff') format('woff');
+		font-weight: 500;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-Md.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Md.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-Regular.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-It.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-It.woff') format('woff');
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-LightIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-LightIt.woff') format('woff');
+		font-weight: 300;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro';
+		src: url($src + 'AkzidenzGroteskPro-Light.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Light.woff') format('woff');
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	// AkzidenzGroteskPro-Cnd
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-XBdCn.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-XBdCn.woff') format('woff');
+		font-weight: 800;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-XBdCnIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-XBdCnIt.woff') format('woff');
+		font-weight: 800;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-BoldCnIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-BoldCnIt.woff') format('woff');
+		font-weight: 700;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-BoldCn.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-BoldCn.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-MdCn.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-MdCn.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-MdCnIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-MdCnIt.woff') format('woff');
+		font-weight: 500;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-CnIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-CnIt.woff') format('woff');
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-Cn.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Cn.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-LightCn.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-LightCn.woff') format('woff');
+		font-weight: 300;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Cnd';
+		src: url($src + 'AkzidenzGroteskPro-LightCnItalic.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-LightCnItalic.woff') format('woff');
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	// AkzidenzGroteskPro-Super
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Super';
+		src: url($src + 'AkzidenzGroteskPro-SuperItalic.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-SuperItalic.woff') format('woff');
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Super';
+		src: url($src + 'AkzidenzGroteskPro-Super.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Super.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	// AkzidenzGroteskPro-Extra
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-BoldEx.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-BoldEx.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-BoldExIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-BoldExIt.woff') format('woff');
+		font-weight: 700;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-MedExtIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-MedExtIt.woff') format('woff');
+		font-weight: 500;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-MdEx.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-MdEx.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-Ext.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-Ext.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-ExtItalic.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-ExtItalic.woff') format('woff');
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-LightEx.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-LightEx.woff') format('woff');
+		font-weight: 300;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'AkzidenzGroteskPro-Extra';
+		src: url($src + 'AkzidenzGroteskPro-LigExtIt.woff2') format('woff2'),
+			url($src + 'AkzidenzGroteskPro-LigExtIt.woff') format('woff');
+		font-weight: 300;
+		font-style: italic;
+	}
+}
+
+
+// LOCAL FONTS
+// Commonly used font stacks
+// - serif
+%times       { font-family: "Times New Roman", Times, serif; }
+%georgia     { font-family: Georgia, "Times New Roman", Times, serif; }
+%baskerville { font-family: Baskerville, "Palatino Linotype", Times, serif; }
+%hoefler     { font-family: "Hoefler Text", Garamond, Times, serif; }
+// - sans-serif
+%arial       { font-family: Arial, Helvetica, sans-serif; }
+%verdana     { font-family: Verdana, Arial, Helvetica, sans-serif; }
+%geneva      { font-family: Geneva, Arial, Helvetica, sans-serif; }
+%tahoma      { font-family: Tahoma, "Lucida Grande", Arial, sans-serif; }
+%trebuchet   { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+%gothic      { font-family: "Century Gothic", "Gill Sans", Arial, sans-serif; }
+// - monospace
+%courier     { font-family: "Courier New", Courier, monospace; }
+%monaco      { font-family: Monaco, "Lucoda Console", monospace; }
+%copperplate { font-family: "Copperplate Light", "Copperplate Gothic Light", serif; }
+%fantasy     { font-family: "Marker Felt", "Comic Sans MS", fantasy; }
+
+
+// FONTS WEIGHT & STYLE
+%ultra-light { font-weight: 200; }
+%light       { font-weight: 300; }
+%normal      { font-weight: 400; }
+%semi-bold   { font-weight: 600; }
+%bold        { font-weight: 700; }
+%ultra-bold  { font-weight: 900; }
+%italic      { font-style: italic; }
+%regular     { font-style: normal; @extend %normal; }

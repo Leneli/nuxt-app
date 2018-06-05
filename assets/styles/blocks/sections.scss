@@ -1,0 +1,170 @@
+/*
+ * Standarn paddings for sections
+*/
+
+.section {
+	padding-top: 65px;
+	padding-bottom: 65px;
+
+	@include tablets {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+.section_top {
+	@extend .section;
+
+	padding-bottom: 0;
+
+	@include tablets { padding-bottom: 0; }
+}
+
+.section_pics {
+	& > *:not(:last-child) {
+		margin-right: 60px;
+
+		@include medium { margin-right: 0; }
+	}
+	& > *:not(:first-child) {
+		margin-left: 60px;
+
+		@include medium { margin-left: 0; }
+	}
+
+	& > *:last-child {
+		@include medium { flex: 1 1 100%; }
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin-bottom: -100px;
+			margin-left: auto;
+
+			@include medium {
+				margin-top: 30px;
+				margin-right: auto;
+			}
+
+			@include tablets {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+/*
+ * Section with TABS on the Home page
+*/
+
+.section-tabs {
+	position: relative;
+	display: block;
+	padding-top: 80px;
+	padding-bottom: 160px;
+	background-color: transparent;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: linear-gradient(140deg, #f9f9f9 40%, rgba(241, 241, 241, .15) 100%);
+
+		@include tablets {
+			background-image: linear-gradient(140deg, #f9f9f9 40%, rgba(241, 241, 241, .7) 100%);
+		}
+	}
+
+	@include tablets {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+
+.component-fade-enter-active, .component-fade-leave-active {
+	transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+  /* .component-fade-leave-active до версии 2.1.8 */ {
+	opacity: 0;
+}
+
+
+
+/* Clients & Candidates pages, section with compass */
+.section-col {
+	img {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	& > *:first-child img {
+		margin-top: -100px;
+		margin-bottom: 100px;
+
+		@include tablets {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	& > *:last-child img {
+		margin-bottom: -100px;
+		margin-top: 50px;
+
+		@include tablets {
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.grid_col > *:not(:last-child) > .section-col {
+	margin-right: 60px;
+
+	@include medium {
+		margin-right: 30px;
+	}
+
+	@include tablets {
+		margin-right: 0;
+	}
+}
+
+.grid_col > *:not(:first-child) > .section-col {
+	margin-left: 60px;
+
+	@include medium {
+		margin-left: 30px;
+	}
+
+	@include tablets {
+		margin-left: 0;
+	}
+}
+
+.grid_col > *:last-child > .section-col {
+	& > *:first-child img {
+		margin-top: -200px;
+
+		@include tablets {
+			margin-top: 30px;
+		}
+	}
+}

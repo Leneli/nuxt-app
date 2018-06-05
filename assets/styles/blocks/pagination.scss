@@ -1,0 +1,97 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	*   { user-select: none; }
+	*:focus { outline: none; }
+}
+
+.pagination__item {
+	@include transition();
+
+	display: flex;
+	align-items: center;
+	height: 25px;
+	padding: 0 7px;
+	color: $color;
+	font-family: $akz;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+
+	&.is-active {
+		// display: flex!important;
+		color: $link;
+	}
+
+	&.is-inactive {
+		opacity: .4;
+		cursor: not-allowed;
+	}
+
+	&:not([class=is-inactive]):hover {
+		color: $link;
+	}
+}
+
+.is-inactive .pagination__item {
+	opacity: .4;
+	cursor: not-allowed;
+}
+
+.pagination__item.dots {
+	& a:hover {
+		color: $color;
+		cursor: default;
+	}
+}
+
+.pagination__item.prev,
+.pagination__item.next {
+	color: $link;
+
+	&:hover { color: $accent; }
+	&.is-inactive:hover { color: $link; }
+
+	@include phones {
+		font-size: 0;
+
+		&::before,
+		&::after {
+			font-size: 20px;
+		}
+	}
+}
+
+.pagination__item.prev {
+	margin-right: 25px;
+	padding-left: 0;
+
+	&::before {
+		content: "\f104";
+		font-family: $fas;
+		margin-top: 5px;
+		margin-right: 5px;
+	}
+
+	@include phones { margin-right: 15px; }
+}
+
+.pagination__item.next {
+	margin-left: 25px;
+	padding-right: 0;
+
+	&::after {
+		content: "\f105";
+		font-family: $fas;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+
+	@include phones { margin-left: 15px; }
+}

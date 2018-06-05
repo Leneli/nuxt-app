@@ -1,0 +1,33 @@
+.blog-preview {
+	display: flex;
+	width: 100%;
+	margin-bottom: 75px;
+
+	@include tablets {
+		display: block;
+	}
+}
+
+.blog-preview__image {
+	flex: 0 0 360px;
+	max-width: 40%;
+	height: 260px;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include tablets {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+.blog-preview__desc {
+	padding-left: 30px;
+
+	@include tablets {
+		margin-top: 25px;
+		padding-left: 0;
+	}
+}

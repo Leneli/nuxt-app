@@ -1,0 +1,21 @@
+.bg_white {
+	display: block;
+	background-color: $white;
+}
+
+.bg_grey {
+	display: block;
+	background-color: $lightGrey;
+}
+
+.bg_lightgrey {
+	display: block;
+	background-color: #f1f1f1;
+}
+
+.bg_compass {
+	display: block;
+	background-image: url(/static/img/decor/big-logo.svg);
+	background-position: 110% 70%;
+	background-repeat: no-repeat;
+}

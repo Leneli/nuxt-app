@@ -1,0 +1,217 @@
+AkzidenzGroteskPro
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-XBdIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-XBdIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-XBd.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-XBd.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-BoldIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-BoldIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-Bold.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-MdIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-MdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-Md.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-Regular.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-It.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-It.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-LightIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url($src + 'AkzidenzGroteskPro-Light.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+// AkzidenzGroteskPro-Cnd
+@font-face {
+	font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-XBdCn.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-XBdCn.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-XBdCnIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-XBdCnIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-BoldCnIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-BoldCnIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-BoldCn.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-BoldCn.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-MdCn.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-MdCn.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-MdCnIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-MdCnIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-CnIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-CnIt.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-Cn.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Cn.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-LightCn.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-LightCn.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Cnd';
+    src: url($src + 'AkzidenzGroteskPro-LightCnItalic.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-LightCnItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+// AkzidenzGroteskPro-Super
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Super';
+    src: url($src + 'AkzidenzGroteskPro-SuperItalic.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-SuperItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Super';
+    src: url($src + 'AkzidenzGroteskPro-Super.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Super.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// AkzidenzGroteskPro-Extra
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-BoldEx.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-BoldEx.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-BoldExIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-BoldExIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-MedExtIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-MedExtIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-MdEx.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-MdEx.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-Ext.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-Ext.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-ExtItalic.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-ExtItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-LightEx.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-LightEx.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AkzidenzGroteskPro-Extra';
+    src: url($src + 'AkzidenzGroteskPro-LigExtIt.woff2') format('woff2'),
+        url($src + 'AkzidenzGroteskPro-LigExtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}

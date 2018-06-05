@@ -1,0 +1,68 @@
+.compass {
+	position: relative;
+	display: block;
+	padding-top: 110px;
+	padding-bottom: 110px;
+	background-color: $white;
+
+	@include l-phones {
+		padding-top: 40px;
+	}
+}
+
+.compass__animate {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	width: 145px;
+	height: 145px;
+	background-color: transparent;
+	background-image: url(/static/img/decor/compass/compass-circle.svg);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.compass__arrow  {
+	@include transition($prop: transform, $time: .15s, $func: ease-out);
+
+	position: relative;
+	display: block;
+	width: 56px;
+	height: 56px;
+	background-image: url(/static/img/decor/compass/compass-arrow.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	transform-origin: center;
+
+	/*@include l-phones {
+		width: 36px;
+		height: 36px;
+	}*/
+}
+
+.compass__desc {
+	display: block;
+	max-width: 945px;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-family: $ctm;
+	color: $color;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+
+	@include l-phones {
+		font-size: 16px;
+		font-weight: 400;
+	}
+}
+
+.compass__anchor {
+	position: absolute;
+	top:  -$headerMobiH;
+}

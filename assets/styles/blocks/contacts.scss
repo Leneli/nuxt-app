@@ -1,0 +1,44 @@
+.contacts {
+	position: relative;
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	//margin-bottom: -260px;
+	width: 100%;
+	padding: 60px 40px;
+	padding-bottom: 0;
+	background-color: $white;
+	z-index: 1;
+
+	@include tablets {
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	@include phones {
+		padding: 30px 15px;
+	}
+}
+
+.contacts__item {
+	flex: 1 1 30%;
+}
+
+.contacts__item_large {
+	flex: 1 1 70%;
+
+	@include large {
+		flex: 0 0 60%;
+	}
+}
+
+.contacts__form {
+	margin-left: 30px;
+
+	.form { margin-bottom: 0; }
+
+	@include tablets {
+		margin-left: 0;
+		margin-top: 50px;
+	}
+}

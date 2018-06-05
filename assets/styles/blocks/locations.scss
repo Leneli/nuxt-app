@@ -1,0 +1,62 @@
+.locations {
+	margin-top: -250px;
+	padding-top: 190px;
+	padding-bottom: 100px;
+
+	@include tablets {
+		padding-bottom: 40px;
+	}
+}
+
+
+.locations__list {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+}
+
+.locations__item {
+	flex: 0 0 50%;
+	max-width: 50%;
+	margin: 0;
+	margin-top: 30px;
+
+	display: flex;
+
+	@include large {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+
+	@include l-phones {
+		display: block;
+	}
+}
+
+.locations__col {
+	margin-right: 30px;
+
+	@include large {
+		&:last-of-type {
+			flex: 1;
+			margin-right: 0;
+		}
+	}
+
+	@include l-phones {
+		margin-right: 0;
+	}
+}
+
+.locations__map {
+	max-width: 260px;
+	
+	@include l-phones {
+		display: block;
+		margin: auto;
+
+		width: 100%;
+		max-width: none;
+	}
+}

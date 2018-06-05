@@ -1,0 +1,206 @@
+.header {
+	@include transition($prop: height);
+
+	// position: absolute;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: $headerDescH;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $headerBg;
+	color: $headerColor;
+	font-family: $akz;
+	font-size: 16px;
+	font-weight: 500;
+	z-index: 1000;
+
+	&.sticky {
+		position: fixed;
+		height: $headerMobiH;
+		top: 0;
+		box-shadow: 0 0 40px -20px rgba($black, .5);
+
+		.header__logo {
+			transform: scale(.75);
+			transform-origin: left center;
+			
+			@include tablets {
+				transform: none;
+			}
+		}
+	}
+
+	@include tablets {
+		height: $headerMobiH;
+		justify-content: center;
+	}
+}
+
+// blocks
+.header__block {
+	display: flex;
+    align-items: center;
+}
+
+.header__block_full {
+	flex: 1 1;
+
+	@include tablets { flex: 0 0; }
+}
+
+// logo
+.header__logo {
+	@include transition();
+	height: 80px;
+
+	@include tablets {
+		display: block;
+		background-image: url("/static/img/logo-mobile-RGB.svg")!important;
+		background-position: center;
+		height: 50px;
+		width: 50px;
+	}
+}
+
+// navigation
+.header__nav {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	align-items: center;
+	justify-content: space-around;
+
+	& > * {
+		@include transition($prop: color);
+
+		padding: 5px 0;
+		font-size: 14px;
+		font-weight: inherit;
+		line-height: 1;
+		color: $headerColor;
+		text-decoration: none;
+		white-space: nowrap;
+		border-bottom: 2px solid rgba($color, 0);
+
+		&.router-link-active {
+			border-bottom: 2px solid rgba($accent, 1);
+
+			@include l-phones {
+				border-bottom: 2px solid rgba($color, 0);
+				color: $accent;
+			}
+		}
+
+		&:hover {
+			color: $accent;
+		}
+
+		@include large {
+			margin: 0 20px;
+		}
+
+		@media screen and (max-height: $l-phones) {
+			margin: 0 5px!important;
+		}
+	}
+
+	@include x-large {
+		width: 100%;
+	}
+
+	@include large {
+		@include transition();
+
+		position: absolute;
+		height: $headerDescH;
+		left: 0;
+		right: 0;
+		top: 0;
+		justify-content: center;
+		opacity: 0;
+		background-color: rgba($color: $white, $alpha: .9);
+		border-top: 1px solid rgba(0, 0, 0, .15);
+		box-shadow: 0 5px 2px -3px rgba(0, 0, 0, .15);
+		z-index: -1;
+
+		&.open {
+			top: 100%;
+			opacity: 1;
+			z-index: 10;
+		}
+	}
+
+	@include l-phones {
+		display: none;
+
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;
+		padding: $headerMobiH 15px 30px;
+		background-color: $white;
+		border-top: none;
+		box-shadow: none;
+
+		& > * {
+			flex: 1 1 100%;
+			margin: 20px 0;
+			font-size: 32px;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&.open {
+			position: fixed;
+			display: flex;
+			top: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			opacity: 1;
+			z-index: 10;
+		}
+	}
+}
+
+// hamburger button
+.header__button {
+	display: none;
+
+	@include large {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 60px;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	@include tablets { height: 32px; }
+
+	@include l-phones {
+		z-index: 50;
+	}
+}
+
+// contact info
+.header__block_contacts {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+
+	& > * {
+		margin: 0 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@include tablets {
+		flex: 1 1 100%;
+		justify-content: center;
+	
+		& > .button_small_accent { display: none; }
+	}
+}

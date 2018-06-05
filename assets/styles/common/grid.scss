@@ -1,0 +1,59 @@
+.grid_col {
+	display: flex;
+	width: 100%;
+
+	& > * {
+		flex: 0 0 50%;
+	}
+
+	.grid_item_mrg:first-of-type > * {
+		margin-right: 50px;
+
+		@include tablets {
+			margin-right: 0;
+		}
+	}
+
+	.grid_item_mrg:last-of-type > * {
+		margin-left: 50px;
+
+		@include tablets {
+			margin-left: 0;
+		}
+	}
+
+	@include tablets {
+		display: block;
+	}
+}
+
+
+.grid_flexible {
+	display: flex;
+	width: 100%;
+
+	@include medium { flex-wrap: wrap; }
+
+	& > * {
+		flex: 1 1 50%;
+
+		@include tablets { flex: 1 1 100%; }
+
+		&:not(:first-child) {
+			margin-left: 15px;
+
+			@include tablets {
+				margin-left: 0;
+				margin-top: 30px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+
+			@include tablets {
+				margin-right: 0;
+			}
+		}
+	}
+}

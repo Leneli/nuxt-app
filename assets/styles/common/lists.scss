@@ -1,0 +1,120 @@
+// ul
+.ul_nomark {
+	padding-left: 0;
+	list-style: none;
+}
+
+// ohne markers
+.list_nomark {
+	display: block;
+	padding-left: 0;
+	list-style: none;
+}
+
+.list_nums {
+	@extend .list_nomark;
+
+	@include tablets {
+		text-align: center;
+	}
+}
+
+// icons
+.list_icons {
+	display: flex;
+	align-items: center;
+
+	li {
+		margin-right: 20px;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.li-icon-mark {
+	display: flex;
+	align-items: baseline;
+
+	&::before {
+		margin-right: 7px;
+	}
+}
+
+.ul_clients {
+	@extend .ul_nomark;
+
+	margin-bottom: 40px;
+
+	li {
+		display: flex;
+		width: 100%;
+		align-items: flex-start;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.5;
+
+		&::before {
+			content: "";
+			display: block;
+			flex-shrink: 0;
+			width: 60px;
+			height: 35px;
+			margin-top: 10px;
+			margin-left: 25px;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+
+		&:nth-of-type(3n + 1) {
+			&::before {
+				background-image: url(/static/img/decor/e-icon.svg);
+			}
+		}
+
+		&:nth-of-type(3n + 2) {
+			&::before {
+				background-image: url(/static/img/decor/c-icon.svg);
+			}
+		}
+
+		&:nth-of-type(3n + 3) {
+			&::before {
+				background-image: url(/static/img/decor/t-icon.svg);
+			}
+		}
+	}
+}
+
+
+
+// ol
+.ol_counter {
+	margin-top: 50px;
+	margin-bottom: 70px;
+	padding-left: 0;
+	list-style: none;
+	counter-reset: point;
+
+	& > li {
+		display: flex;
+		width: 100%;
+		align-items: flex-start;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.5;
+
+		&::before {
+			content: "0" counter(point);
+			counter-increment: point 1;
+			margin-right: 20px;
+			color: $inputColore;
+			font-family: $akz;
+			font-size: 38px;
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
+}

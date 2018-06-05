@@ -1,0 +1,36 @@
+.error-page { /*  */ }
+
+.error-page__wrapper {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.error-page__title {
+	position: relative;
+	font-size: 7rem;
+	font-weight: 700;
+	color: $color;
+
+	@include phones {
+		font-size: 5rem;
+	}
+}
+
+.error-page__subtitle {
+	position: relative;
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	color: $color;
+
+	@include phones {
+		font-size: 30px;
+	}
+}
+
+.error-page__buttons {
+	margin: 30px;
+}

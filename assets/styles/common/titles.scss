@@ -1,0 +1,114 @@
+.h1 {
+	margin: 10px 0;
+	font-family: $akz;
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $color;
+	text-transform: uppercase;
+
+	@include phones {
+		line-height: 1;
+    	font-size: 40px;
+	}
+}
+
+.h1_mob {
+	@include tablets {
+		line-height: 1.2;
+    	font-size: 30px;
+	}
+}
+
+.h2 {
+	display: block;
+	margin: 0;
+	padding: .5em 0;
+	font-family: $akz;
+	color: $color;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.h2_section {
+	@extend .h2;
+
+	padding-bottom: 65px;
+
+	@include tablets { padding-bottom: 36px; }
+}
+
+.h2_blog {
+	margin: 0;
+	margin-bottom: .5em;
+	font-family: $akz;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1;
+	color: $color;
+	text-decoration: none;
+
+	@include phones {
+		font-size: 30px;
+	}
+}
+a.h2_blog {
+	@include transition();
+
+	&:hover {
+		color: $accent;
+	}
+}
+
+.h3 {
+	margin: .5em 0;
+	font-family: $akz;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.h4 {
+	margin: 0;
+	font-family: $akz;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+
+
+// Decor
+%h_decor {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 35px;
+		height: 35px;
+		top: -50px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		@include tablets { top: -30px; }
+	}
+}
+
+.h_client {
+	@extend %h_decor;
+
+	&::before {
+		background-image: url(/static/img/decor/c-icon.svg);
+	}
+}
+
+.h_candidate {
+	@extend %h_decor;
+
+	&::before {
+		background-image: url(/static/img/decor/e-icon.svg);
+	}
+}

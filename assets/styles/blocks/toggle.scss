@@ -1,0 +1,51 @@
+.toggle {
+	display: block;
+	width: 24px;
+	height: 21px;
+	margin-top: 19px;
+}
+
+.toggle__line,
+.toggle__line::after,
+.toggle__line::before {
+	width: 100%;
+	height: 3px;
+	background-color: $link;
+	transition: all 0.3s;
+	border-radius: 2px;
+}
+  
+.toggle__line::after,
+.toggle__line::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -9px;
+}
+
+.toggle__line::after{
+	top: 9px;
+	width: 50%;
+	left: auto;
+	right: 0;
+}
+
+.toggle__line {
+	position: relative;
+	display: block;
+}
+  
+
+/* on activation */
+.header__button.open .toggle .toggle__line {
+	background-color: transparent;
+}
+.header__button.open .toggle .toggle__line::before {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+.header__button.open .toggle .toggle__line::after {
+	width: 100%;
+	left: 0;
+	right: 0;
+	transform: rotate(-45deg) translate(7px, -8px);
+}
